@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: vnezapnotut
+      POSTGRES_USER: test_user
+      POSTGRES_DB: blog
+    ports:
+    - 7432:5432
+    volumes:
+    - "dbdata:/var/lib/postgresql/data"
+
+
+volumes:
+  dbdata:
