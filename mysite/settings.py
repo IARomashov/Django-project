@@ -77,7 +77,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+# 'default': env.db('DATABASE_URL', default='sqlite://db.sqlite3'),
+# 'default': env.db('DATABASE_URL', default='postgresql://test_user:vnezapnotut@0.0.0.0:7432/blog'),
 DATABASES = {
     'default': env.db('DATABASE_URL', default='postgresql://test_user:vnezapnotut@0.0.0.0:7432/blog'),
 }
